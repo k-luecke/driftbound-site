@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Driftbound Labs</title>
-<meta name="description" content="Driftbound Labs — independent applied research with an emphasis on method. Pre-registration, hashed artifacts, and explicit limits.">
+<meta name="description" content="Driftbound Labs — an independent research effort that reads across disciplines to find open, tractable problems. Research interests and directions under study.">
 <meta name="color-scheme" content="light dark">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Driftbound Labs">
-<meta property="og:description" content="Independent applied research. Emphasis on method.">
+<meta property="og:description" content="Independent research across disciplines. Research interests and directions under study.">
 <meta property="og:url" content="https://driftboundlabs.com">
 <link rel="canonical" href="https://driftboundlabs.com/">
 
@@ -21,9 +21,10 @@
   :root {
     --paper:  #FBFAF7;
     --ink:    #1C201E;
-    --muted:  #626A66;
+    --muted:  #5F6763;
     --faint:  #8A928D;
     --line:   #E6E3DC;
+    --hair:   #EEECE6;
     --accent: #3C665B;
   }
 
@@ -34,13 +35,13 @@
       --muted:  #9AA29D;
       --faint:  #6E7671;
       --line:   #262A27;
-      --accent: #7FB2A4;
+      --hair:   #1E2220;
+      --accent: #82B5A7;
     }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
   body {
     background: var(--paper);
@@ -52,11 +53,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  .wrap {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+  .wrap { max-width: 42rem; margin: 0 auto; padding: 0 24px; }
 
   a {
     color: var(--accent);
@@ -66,67 +63,109 @@
   a:hover, a:focus-visible { border-bottom-color: var(--accent); }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-  .kicker {
+  .mono {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--faint);
+    font-feature-settings: "tnum" 1;
   }
 
   /* ---- masthead ---- */
-  header {
-    padding: 72px 0 0;
-  }
-  .wordmark {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 0.005em;
-  }
-  .tagline {
-    margin-top: 8px;
-    color: var(--muted);
-    font-size: 18px;
-  }
-  .rule {
-    height: 1px;
-    background: var(--line);
-    border: 0;
-    margin: 32px 0;
-  }
+  header { padding: 72px 0 0; }
+  .wordmark { font-size: 22px; font-weight: 600; letter-spacing: 0.005em; }
+  .tagline { margin-top: 8px; color: var(--muted); font-size: 18px; }
 
-  /* ---- sections ---- */
-  main { padding-bottom: 8px; }
-  section { padding: 4px 0; }
-  section .kicker { display: block; margin-bottom: 12px; }
+  /* ---- section scaffolding ---- */
+  .section-label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 26px;
+    display: block;
+  }
+  section { padding: 46px 0 0; }
+  .intro { color: var(--muted); font-size: 16.5px; margin-bottom: 30px; max-width: 38rem; }
 
   p { margin: 0 0 14px; }
   p:last-child { margin-bottom: 0; }
+  .approach p { margin-bottom: 16px; }
 
-  .note { color: var(--muted); font-size: 16.5px; }
+  /* ---- entries (open questions / applied directions) ---- */
+  .entry { padding: 22px 0; }
+  .entry + .entry { border-top: 1px solid var(--hair); }
+  .entry:first-of-type { padding-top: 0; }
 
-  .contact .addr {
+  .field {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--faint);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .field .num { color: var(--accent); }
+  .field .wt { color: var(--faint); }
+
+  .entry h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.28;
+    letter-spacing: -0.005em;
+    margin-bottom: 8px;
+  }
+  .qtext { margin-bottom: 12px; }
+
+  .note {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 0;
+  }
+  .note + .note { margin-top: 10px; }
+  .note-label {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 13px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-right: 2px;
+  }
+
+  /* ---- active work ---- */
+  .project h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+  .project p { margin-bottom: 12px; }
+
+  /* ---- contact ---- */
+  .addr {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 16px;
     letter-spacing: 0.01em;
   }
 
+  /* ---- colophon ---- */
+  .colophon {
+    margin-top: 54px;
+    padding: 26px 0 0;
+    border-top: 1px solid var(--line);
+  }
+  .colophon p { font-size: 14.5px; color: var(--faint); line-height: 1.58; }
+
   footer {
-    margin-top: 40px;
+    margin-top: 46px;
     padding: 22px 0 56px;
     border-top: 1px solid var(--line);
   }
-  footer .wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-  }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; }
+  footer .mono { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); }
 
   @media (max-width: 480px) {
     body { font-size: 17px; }
     header { padding-top: 52px; }
+    section { padding-top: 40px; }
   }
 </style>
 </head>
@@ -135,63 +174,281 @@
 <header>
   <div class="wrap">
     <div class="wordmark">Driftbound Labs</div>
-    <p class="tagline">Independent applied research. Emphasis on method.</p>
+    <p class="tagline">Independent research across disciplines.</p>
   </div>
 </header>
 
 <main>
   <div class="wrap">
 
-    <hr class="rule">
+    <!-- ================= APPROACH ================= -->
+    <section class="approach" id="approach">
+      <span class="section-label">Approach</span>
+      <p>Driftbound Labs is an independent research effort building a machine-learning
+      pipeline to read across disciplines at scale. The working premise is that many
+      difficult problems are not waiting on a new discovery so much as on a connection:
+      a result already well established in one field can be the missing piece for an open
+      problem in another, but the two fields rarely read each other closely. The lab's
+      aim is to find those gaps — where a known method in one discipline answers an
+      unanswered question in a second — and to combine existing, individually
+      unremarkable results from each side into a solution whose novelty lies in the
+      joining.</p>
 
-    <section>
-      <span class="kicker">Method</span>
-      <p>Work is pre-registered where possible. Decision rules and null tests are fixed
-      before data is examined. Artifacts are hashed so results can be checked against
-      what was actually run. Negative outcomes are reported as negative outcomes.</p>
-      <p>The scientific method is treated as operational practice, not branding.</p>
+      <p>The pipeline is the tool for surveying the literature broadly enough to surface
+      those pairings; the framing method below is how a candidate pairing is tested for
+      whether the connection actually holds. This is the lab's intended way of working
+      across a broad range of fields — a direction under development, not a demonstrated
+      capability.</p>
+
+      <p>The lab uses a recurring structure to frame a problem. A candidate capability is
+      broken into properties that have each been demonstrated somewhere in the literature
+      but never together. The frame then names two things: a constraint the field treats
+      as fixed that is actually a design choice (and might be engineered away), and a
+      constraint that is a theorem, conservation law, or measurement limit (and will not
+      move). A problem worth working on sits between the two. This structure relates to
+      established traditions in structured problem analysis; the lab treats it as a
+      working method, not a discovery.</p>
+
+      <p>Experiments are designed with the outcome rules written first: what would count
+      as confirmation, what would count as refutation, and a defined region between them
+      that counts as inconclusive. The aim is that a negative result is as informative as
+      a positive one.</p>
     </section>
 
-    <hr class="rule">
+    <!-- ================= OPEN QUESTIONS ================= -->
+    <section id="open-questions">
+      <span class="section-label">Open Questions</span>
+      <p class="intro">Ten problems the lab finds worth pursuing, across ten fields. Each
+      is stated as a question, followed by the constraint that keeps it open. These are
+      research interests, not results.</p>
 
-    <section>
-      <span class="kicker">Current work</span>
-      <p>Physical-layer integrity for synchronized time: using shared geophysical signals
-      as a cross-site reference to bound clock offset in ways cryptographic authentication
-      does not. Early validation used published multi-station data under pre-declared
-      criteria. Further measurement under controlled sensor and site conditions is
-      required.</p>
+      <div class="entry">
+        <span class="field"><span class="num">01</span> · Clinical neuroscience</span>
+        <h3>The Bedside Witness</h3>
+        <p class="qtext">Is there a reading of a person's inner life that a machine can
+        take at the bedside — needing no movement, speech, or cooperation — specific
+        enough to trust when a family is deciding whether to withdraw care?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> no task-based
+        measure can distinguish absent consciousness from present consciousness that
+        failed to engage the task. Absence of the signal is not the signal of absence — a
+        limit of the inference, not of the instrument.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">02</span> · Quantum gravity <span class="wt">· working title</span></span>
+        <h3>The First Quantum of Gravity</h3>
+        <p class="qtext">Can a tabletop experiment show that gravity places two masses
+        into an entangled state — the first empirical datum on whether gravity is
+        quantized?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> local operations
+        and classical communication cannot create entanglement, so entanglement mediated
+        by gravity alone would imply a quantum mediator. But the two hardest requirements
+        pull against each other — more mass gives more gravitational signal and more
+        coupling to everything else.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">03</span> · Electrocatalysis</span>
+        <h3>The Cold Corner</h3>
+        <p class="qtext">Can a catalyst break the nitrogen triple bond at ambient
+        temperature and pressure, with Haber–Bosch selectivity, at industrial current
+        density, without consuming a sacrificial metal?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> on a metal
+        surface the binding energies of the reaction intermediates are linearly
+        correlated, so the strength that splits nitrogen cannot be tuned independently of
+        the weakness that releases ammonia.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">04</span> · Origin of life <span class="wt">· working title</span></span>
+        <h3>The Single Pot</h3>
+        <p class="qtext">Can replication, metabolism, and compartmentalization coexist in
+        one prebiotically plausible system, without a chemist steering each step?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> replication
+        fidelity bounds how much information a system can maintain (the error threshold),
+        which constrains how the three functions can be assembled together.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">05</span> · Cryopreservation <span class="wt">· working title</span></span>
+        <h3>The Window That Shuts</h3>
+        <p class="qtext">Can an organ be vitrified and rewarmed above some critical size
+        without ice forming?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> below a critical
+        cooling and warming rate, ice nucleates; that rate rises with volume while
+        cryoprotectant concentration is capped by toxicity. The two constraints close on
+        each other as organs get larger, and where the window shuts is not known.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">06</span> · Aging biology</span>
+        <h3>The Dial Without a Cliff</h3>
+        <p class="qtext">Is there a dose of cellular plasticity that resets an aged cell's
+        epigenome without loosening its grip on its own identity — delivered
+        systemically, in a normal animal, without a tumor?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> the same
+        relaxation that permits rejuvenation may be the same process that permits
+        dedifferentiation and tumor formation. If they are one variable rather than two,
+        no dose separates them.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">07</span> · Machine learning interpretability</span>
+        <h3>The Probe That Cannot Be Trained Against</h3>
+        <p class="qtext">Is there a reading of a model's internal state that reports
+        whether it believes what it is saying — and stays accurate while the model is
+        optimized in the presence of the reading?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> any measure that
+        becomes a training target tends to stop being a good measure. A probe inside the
+        optimization loop is optimized against; a probe outside it has no guarantee across
+        distribution shift.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">08</span> · Astrobiology</span>
+        <h3>The Signature With No Twin</h3>
+        <p class="qtext">Is there an unambiguous biosignature — one that cannot be produced
+        by chemistry alone?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> there is exactly
+        one known biosphere, so any claim about what life does versus what chemistry does
+        is fit to a sample of one. The hardest parts are questions of inference, not of
+        instrument sensitivity.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">09</span> · Fusion energy</span>
+        <h3>The Fuel That Makes Its Own Fuel</h3>
+        <p class="qtext">Can a plant breed more tritium than it burns, from a blanket that
+        must also survive high-energy neutrons, extract the heat, and leave room for the
+        magnets and the ports?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> one
+        deuterium–tritium fusion yields exactly one neutron, and more than one tritium
+        must return from it. Every structural atom, port, and parasitic capture eats a
+        margin set by nuclear physics.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">10</span> · Antibiotics <span class="wt">· working title</span></span>
+        <h3>The Gate With Two Locks</h3>
+        <p class="qtext">Is there a rule that predicts whether a molecule will accumulate
+        inside a Gram-negative bacterium — across species, for both entry and removal?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> accumulation is
+        entry minus efflux, and the two terms select on partly opposing properties, so any
+        rule built on a single descriptor is structurally under-determined.</p>
+      </div>
     </section>
 
-    <hr class="rule">
+    <!-- ================= APPLIED DIRECTIONS ================= -->
+    <section id="applied-directions">
+      <span class="section-label">Applied Directions</span>
+      <p class="intro">Five applied problems in resilient timing, navigation, sensing, and
+      trust. These are closer to the lab's active engineering capability. Same convention:
+      stated as open questions with the constraint that keeps each one hard.</p>
 
-    <section>
-      <span class="kicker">Direction</span>
-      <p>The longer path is a data pipeline that supports frontier work in the physical
-      sciences.</p>
-      <p>The intent is to use structured data and machine learning to help identify
-      research questions that are both open and tractable — problems where the necessary
-      measurements, constraints, and decision criteria can be stated clearly enough that
-      the work can actually be completed. The same standards apply: pre-registration,
-      hashed artifacts, and explicit limits.</p>
-      <p class="note">Timing integrity is one instance of that approach, not the
-      definition of the lab.</p>
+      <div class="entry">
+        <span class="field"><span class="num">01</span> · Assured time integrity</span>
+        <h3>The Clock That Knows It Is Being Lied To</h3>
+        <p class="qtext">Can a distributed set of clocks hold verifiable time through a
+        combined denial-and-deception attack — detecting a lying synchronization signal,
+        not merely surviving a missing one — from a reference an adversary cannot
+        manipulate in transit?</p>
+        <p class="note"><span class="note-label">Context</span> current work in the field
+        largely addresses holdover — keeping accurate time when a reference is jammed or
+        denied. That defeats denial but not deception; a clock that holds perfectly can
+        still be handed a manipulated re-synchronization signal.</p>
+        <p class="note"><span class="note-label">Why it stays open</span> with round-trip
+        timing measurements alone, an asymmetric path delay and a clock offset are
+        indistinguishable. Detecting a subtle manipulation therefore requires an
+        independent reference that does not travel through the same channel.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">02</span> · Navigation integrity</span>
+        <h3>The Reference That Won't Hold Still</h3>
+        <p class="qtext">Can a magnetic-anomaly navigation system know, in real time, when
+        its reference field is being corrupted by space weather or daily variation — the
+        transient effects that currently force pre-surveyed maps and in-mission
+        calibration?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> the stable field
+        and the transient corruption arrive through the same sensor. They cannot be
+        separated at a single node without an independent temporal reference.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">03</span> · Edge trust</span>
+        <h3>The Key That Survives Its Own Capture</h3>
+        <p class="qtext">Can a disconnected device continuously authenticate both itself
+        and its operator, with no network callback, and degrade predictably rather than
+        catastrophically if it is physically captured?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> how much
+        compromising one factor (the device or the operator) reveals about the other, once
+        they are jointly combined, is an unresolved question in the underlying theory. This
+        direction is held pending progress on that question.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">04</span> · Passive distributed sensing</span>
+        <h3>The Net That Hears Without Listening</h3>
+        <p class="qtext">Can a low-cost mesh of passive sensors detect and locate a
+        hard-to-see object from its magnetic signature — telling it apart from natural
+        geophysical noise at useful range?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> a magnetic
+        signature falls off steeply with distance, a hard limit no processing can beat. It
+        sets a floor on how dense such a mesh must be for a given range.</p>
+      </div>
+
+      <div class="entry">
+        <span class="field"><span class="num">05</span> · Data provenance</span>
+        <h3>The Timestamp That Outlives the Node</h3>
+        <p class="qtext">Can a recorded observation's time and place of origin stay
+        verifiable after the fact, even if the device that made it is later fully
+        compromised?</p>
+        <p class="note"><span class="note-label">Why it stays open</span> a device holding
+        all of its own keys can always forge its own clock. Establishing a time that
+        survives later compromise requires an external reference the device could not have
+        predicted or manufactured in advance.</p>
+      </div>
     </section>
 
-    <hr class="rule">
+    <!-- ================= ACTIVE WORK ================= -->
+    <section id="active-work">
+      <span class="section-label">Active Work</span>
+      <p class="intro">One current project, described in honest scope.</p>
 
-    <section class="contact">
-      <span class="kicker">Contact</span>
+      <div class="project">
+        <h3>A biometric-to-hash authentication pipeline</h3>
+        <p>A construction that combines a biometric-derived value and a hardware-derived
+        value before hashing, aimed at authentication that degrades gradually rather than
+        all at once.</p>
+        <p class="note"><span class="note-label">Status</span> paused, pending resolution
+        of an open theoretical question about how much compromising one source reveals
+        about the other when the two are combined. The lab regards this open question as
+        the honest gate on the work, and does not present the design as complete.</p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <span class="section-label">Contact</span>
       <p class="addr"><a href="mailto:admin@driftboundlabs.com">admin@driftboundlabs.com</a></p>
     </section>
+
+    <!-- ================= COLOPHON ================= -->
+    <div class="colophon">
+      <p>The framing method described here relates to established traditions in structured
+      problem analysis and is used as a working tool, not claimed as original. Literature
+      anchors for the open questions are available on request. Where questions touch on
+      active or contested research, the constraint stated as “why it stays open” reflects
+      the current understanding and may be revised as the field moves.</p>
+    </div>
 
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <span class="kicker">&copy; 2026 Driftbound Labs</span>
-    <span class="kicker">driftboundlabs.com</span>
+    <span class="mono">&copy; 2026 Driftbound Labs</span>
+    <span class="mono">driftboundlabs.com</span>
   </div>
 </footer>
 
