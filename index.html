@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Driftbound Labs</title>
-<meta name="description" content="Driftbound Labs — independent applied research on physical-layer integrity. Present focus: time integrity monitoring for synchronized clocks.">
+<meta name="description" content="Driftbound Labs — independent applied research with an emphasis on method. Pre-registration, hashed artifacts, and explicit limits.">
 <meta name="color-scheme" content="light dark">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Driftbound Labs">
-<meta property="og:description" content="Independent applied research on physical-layer integrity.">
+<meta property="og:description" content="Independent applied research. Emphasis on method.">
 <meta property="og:url" content="https://driftboundlabs.com">
 <link rel="canonical" href="https://driftboundlabs.com/">
 
@@ -101,39 +101,10 @@
   section { padding: 4px 0; }
   section .kicker { display: block; margin-bottom: 12px; }
 
-  h2.sub {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 4px;
-  }
-
   p { margin: 0 0 14px; }
   p:last-child { margin-bottom: 0; }
 
-  .lead { color: var(--ink); }
   .note { color: var(--muted); font-size: 16.5px; }
-
-  ul.approach {
-    list-style: none;
-    margin: 2px 0 0;
-  }
-  ul.approach li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 9px;
-    color: var(--ink);
-  }
-  ul.approach li:last-child { margin-bottom: 0; }
-  ul.approach li::before {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: 0.72em;
-    width: 6px;
-    height: 6px;
-    border: 1px solid var(--accent);
-    border-radius: 50%;
-  }
 
   .contact .addr {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -164,7 +135,7 @@
 <header>
   <div class="wrap">
     <div class="wordmark">Driftbound Labs</div>
-    <p class="tagline">Independent applied research on physical-layer integrity.</p>
+    <p class="tagline">Independent applied research. Emphasis on method.</p>
   </div>
 </header>
 
@@ -174,48 +145,37 @@
     <hr class="rule">
 
     <section>
-      <span class="kicker">Focus</span>
-      <p class="lead">Systems that depend on time, sensors, or environmental references
-      often treat those inputs as given. Cryptography can protect data and identity;
-      it does not automatically detect when arrival times are delayed, when residuals
-      are biased inside the noise model, or when a slow offset has accumulated while
-      still looking ordinary.</p>
-      <p class="lead">We work on methods that make those effects measurable.</p>
+      <span class="kicker">Method</span>
+      <p>Work is pre-registered where possible. Decision rules and null tests are fixed
+      before data is examined. Artifacts are hashed so results can be checked against
+      what was actually run. Negative outcomes are reported as negative outcomes.</p>
+      <p>The scientific method is treated as operational practice, not branding.</p>
     </section>
 
     <hr class="rule">
 
     <section>
       <span class="kicker">Current work</span>
-      <h2 class="sub">Time integrity</h2>
-      <p>Integrity monitoring for synchronized clocks, using shared geophysical signals
-      as a cross-site reference. The aim is a passive check that can sit beside existing
-      timing systems and flag asymmetric delay or slow offset growth that cryptographic
-      authentication does not see.</p>
-      <p class="note">Validation so far has used published multi-station magnetometer
-      data. Further work is needed on purpose-built sensors, noise conditions at real
-      sites, and detection performance under pre-registered criteria.</p>
+      <p>Physical-layer integrity for synchronized time: using shared geophysical signals
+      as a cross-site reference to bound clock offset in ways cryptographic authentication
+      does not. Early validation used published multi-station data under pre-declared
+      criteria. Further measurement under controlled sensor and site conditions is
+      required.</p>
     </section>
 
     <hr class="rule">
 
     <section>
-      <span class="kicker">Approach</span>
-      <ul class="approach">
-        <li>Prefer references that are difficult to forge or deny remotely</li>
-        <li>Treat residuals and innovations as signals worth monitoring</li>
-        <li>Declare test criteria before looking at data</li>
-        <li>State precision and noise limits instead of omitting them</li>
-      </ul>
-    </section>
-
-    <hr class="rule">
-
-    <section>
-      <span class="kicker">About</span>
-      <p>Driftbound Labs is a small independent effort. Timing integrity is the present
-      focus; the same questions apply to other cases where a physical channel is trusted
-      and residual behavior is under-examined.</p>
+      <span class="kicker">Direction</span>
+      <p>The longer path is a data pipeline that supports frontier work in the physical
+      sciences.</p>
+      <p>The intent is to use structured data and machine learning to help identify
+      research questions that are both open and tractable — problems where the necessary
+      measurements, constraints, and decision criteria can be stated clearly enough that
+      the work can actually be completed. The same standards apply: pre-registration,
+      hashed artifacts, and explicit limits.</p>
+      <p class="note">Timing integrity is one instance of that approach, not the
+      definition of the lab.</p>
     </section>
 
     <hr class="rule">
