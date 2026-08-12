@@ -47,9 +47,10 @@ Encrypt certificate automatically. Return to Settings → Pages and check
 
 ## Email
 
-`admin@driftboundlabs.com` on the contact card needs a real inbox behind it.
-Most registrars offer free email forwarding — point `admin@` at a real inbox,
-or swap the address in `index.html`.
+`admin@driftboundlabs.com` is the address on the contact card. A catch-all
+forwarding rule for the domain is configured at the registrar, so mail to
+`admin@` (and any other `@driftboundlabs.com` address) is delivered. To change
+the public address, edit it in `index.html`.
 
 ## Verify before Aug 19
 
