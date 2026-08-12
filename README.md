@@ -47,9 +47,9 @@ Encrypt certificate automatically. Return to Settings → Pages and check
 
 ## Email
 
-`hello@driftboundlabs.com` on the contact card is a placeholder until
-forwarding exists. Most registrars offer free email forwarding — point
-`hello@` at a real inbox, or swap the address in `index.html`.
+`admin@driftboundlabs.com` on the contact card needs a real inbox behind it.
+Most registrars offer free email forwarding — point `admin@` at a real inbox,
+or swap the address in `index.html`.
 
 ## Verify before Aug 19
 
