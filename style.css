@@ -182,6 +182,7 @@ section { padding: 48px 0 0; }
 /* ---- active work ---- */
 .project h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
 .project p { margin-bottom: 12px; }
+.project + .project { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--hair); }
 
 /* ---- contact ---- */
 .addr {
