@@ -177,11 +177,6 @@ section { padding: 48px 0 0; }
 .note-label {
   font-weight: 600;
   color: var(--ink);
-  font-size: 13px;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-right: 2px;
 }
 
 /* ---- active work ---- */

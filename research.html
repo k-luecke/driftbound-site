@@ -53,66 +53,65 @@
     <section id="applied-directions">
       <span class="section-label">Applied Directions · the lab's own focus</span>
       <p class="intro">Five applied problems in resilient timing, navigation, sensing, and
-      trust — closer to the lab's active engineering capability. Each is stated as an open
-      question with the constraint that keeps it hard.</p>
+      trust — closer to the lab's active engineering. Each is stated plainly, with the
+      constraint that keeps it open.</p>
 
       <div class="entry">
-        <span class="field"><span class="num">01</span> · Assured time integrity</span>
-        <h3>The Clock That Knows It Is Being Lied To</h3>
-        <p class="qtext">Can a distributed set of clocks hold verifiable time through a
-        combined denial-and-deception attack — detecting a lying synchronization signal,
-        not merely surviving a missing one?</p>
-        <p class="note"><span class="note-label">Context</span> current work largely
-        addresses holdover — keeping time when a reference is jammed or denied. That
-        defeats denial but not deception; a clock that holds perfectly can still be handed
-        a manipulated re-synchronization signal.</p>
-        <p class="note"><span class="note-label">Why it stays open</span> with round-trip
+        <span class="field"><span class="num">01</span></span>
+        <h3>Assured time integrity</h3>
+        <p class="qtext">Whether a distributed set of clocks can hold verifiable time
+        through combined denial and deception — detecting a manipulated synchronization
+        signal, not only surviving a missing one. Most current work addresses holdover,
+        keeping time when a reference is jammed or denied; that handles denial but not
+        deception, since a clock that holds perfectly can still accept a manipulated
+        re-synchronization signal.</p>
+        <p class="note"><span class="note-label">Constraint</span> — with round-trip
         timing alone, an asymmetric path delay and a clock offset are indistinguishable.
         Detecting a subtle manipulation requires an independent reference that does not
         travel through the same channel.</p>
       </div>
 
       <div class="entry">
-        <span class="field"><span class="num">02</span> · Navigation integrity</span>
-        <h3>The Reference That Won't Hold Still</h3>
-        <p class="qtext">Can a magnetic-anomaly navigation system know, in real time, when
-        its reference field is being corrupted by space weather or daily variation?</p>
-        <p class="note"><span class="note-label">Why it stays open</span> the stable field
-        and the transient corruption arrive through the same sensor. They cannot be
-        separated at a single node without an independent temporal reference.</p>
+        <span class="field"><span class="num">02</span></span>
+        <h3>Navigation integrity</h3>
+        <p class="qtext">Whether a magnetic-anomaly navigation system can detect, in real
+        time, when its reference field is being corrupted by space weather or daily
+        variation.</p>
+        <p class="note"><span class="note-label">Constraint</span> — the stable field and
+        the transient corruption reach the same sensor, and cannot be separated at a
+        single node without an independent temporal reference.</p>
       </div>
 
       <div class="entry">
-        <span class="field"><span class="num">03</span> · Edge trust</span>
-        <h3>The Key That Survives Its Own Capture</h3>
-        <p class="qtext">Can a disconnected device continuously authenticate both itself
-        and its operator, with no network callback, and degrade predictably rather than
-        catastrophically if it is physically captured?</p>
-        <p class="note"><span class="note-label">Why it stays open</span> how much
-        compromising one factor reveals about the other, once they are jointly combined, is
-        an unresolved question in the underlying theory. This direction is held pending
-        progress on it.</p>
+        <span class="field"><span class="num">03</span></span>
+        <h3>Edge trust</h3>
+        <p class="qtext">Whether a disconnected device can continuously authenticate both
+        itself and its operator with no network callback, and degrade predictably rather
+        than catastrophically if it is physically captured.</p>
+        <p class="note"><span class="note-label">Constraint</span> — how much compromising
+        one factor reveals about the other, once the two are combined, is unresolved in
+        the underlying theory. The direction is held pending progress on that question.</p>
       </div>
 
       <div class="entry">
-        <span class="field"><span class="num">04</span> · Passive distributed sensing</span>
-        <h3>The Net That Hears Without Listening</h3>
-        <p class="qtext">Can a low-cost mesh of passive sensors detect and locate a
-        hard-to-see object from its magnetic signature — telling it apart from natural
-        geophysical noise at useful range?</p>
-        <p class="note"><span class="note-label">Why it stays open</span> a magnetic
-        signature falls off steeply with distance, a hard limit no processing can beat. It
-        sets a floor on how dense such a mesh must be for a given range.</p>
+        <span class="field"><span class="num">04</span></span>
+        <h3>Passive distributed sensing</h3>
+        <p class="qtext">Whether a low-cost mesh of passive sensors can detect and locate
+        an object from its magnetic signature and distinguish it from natural geophysical
+        noise at useful range.</p>
+        <p class="note"><span class="note-label">Constraint</span> — a magnetic signature
+        falls off steeply with distance, a hard limit no processing removes, which sets a
+        floor on how dense the mesh must be for a given range.</p>
       </div>
 
       <div class="entry">
-        <span class="field"><span class="num">05</span> · Data provenance</span>
-        <h3>The Timestamp That Outlives the Node</h3>
-        <p class="qtext">Can a recorded observation's time and place of origin stay
-        verifiable after the fact, even if the device that made it is later fully
-        compromised?</p>
-        <p class="note"><span class="note-label">Why it stays open</span> a device holding
-        all of its own keys can always forge its own clock. A time that survives later
+        <span class="field"><span class="num">05</span></span>
+        <h3>Data provenance</h3>
+        <p class="qtext">Whether a recorded observation's time and place of origin can
+        remain verifiable after the fact, even if the device that made it is later fully
+        compromised.</p>
+        <p class="note"><span class="note-label">Constraint</span> — a device holding all
+        of its own keys can forge its own clock. A timestamp that survives later
         compromise requires an external reference the device could not have predicted or
         manufactured in advance.</p>
       </div>
@@ -127,7 +126,7 @@
         <p>A construction that combines a biometric-derived value and a hardware-derived
         value before hashing, aimed at authentication that degrades gradually rather than
         all at once.</p>
-        <p class="note"><span class="note-label">Status</span> paused, pending resolution
+        <p class="note"><span class="note-label">Status</span> — paused, pending resolution
         of an open theoretical question about how much compromising one source reveals
         about the other when the two are combined. The lab regards this open question as
         the honest gate on the work, and does not present the design as complete.</p>
