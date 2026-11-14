@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Papers &amp; Standards — Driftbound Labs</title>
+<meta name="description" content="Preprints, institutional research whitepapers, preregistered verification packages, and open provenance standards from Driftbound Labs.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Papers &amp; Standards — Driftbound Labs">
+<meta property="og:description" content="Preprints, empirical negative results, preregistered verification artifacts, and open provenance standards.">
+<meta property="og:url" content="https://driftboundlabs.com/papers.html">
+<link rel="canonical" href="https://driftboundlabs.com/papers.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="wordmark" href="/">Driftbound Labs</a>
+    <nav>
+      <a href="/papers.html" aria-current="page">Papers</a>
+      <a href="/research.html">Research</a>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="pagehead">
+      <span class="kicker">Papers &amp; Open Standards</span>
+      <h1>Preprints, verification packages, and specifications.</h1>
+      <p class="author-bar">
+        Kyle W. Luecke · Driftbound Labs · ORCID
+        <a href="https://orcid.org/0009-0008-0202-7852">0009-0008-0202-7852</a>
+      </p>
+    </div>
+
+    <div class="prose">
+      <p>Every study released by the lab fixes its pass, fail, and inconclusive thresholds
+      before outcome data are inspected and reports failed gates, null comparisons, and
+      regime crossovers alongside positive findings. Companion repositories publish frozen
+      preregistrations or pre-specification manifests, SHA-256 digests, OpenTimestamps
+      anchors where established, and reproduction harnesses so every number can be checked
+      from source.</p>
+    </div>
+
+    <!-- ================= RESEARCH PAPERS & WHITEPAPERS ================= -->
+    <section id="preprints">
+      <span class="section-label">Preprints &amp; Institutional Research · 2026</span>
+      <p class="intro">Six manuscripts spanning geophysical clock-integrity bounds, typed
+      runtime boundaries for small language models, oscillatory mixture-of-experts control,
+      network-native computation, physical-layer AI infrastructure bottlenecks, and
+      state-space retraction algebra.</p>
+
+      <!-- PAPER 01 -->
+      <article class="entry" id="schumann-clock-integrity">
+        <span class="field"><span class="num">01</span> · Geophysics · Time Metrology · GWOSC O3</span>
+        <h3>Exterior Clock-Integrity Auditing via Canonical Coherence of the Schumann Resonance Field</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · v2.0 (November 2026) · 8 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">Frozen Preregistration · SHA-256 Verified</span>
+          <span class="badge">P1, P2 &amp; D1 Supported · D2b Not Supported</span>
+        </div>
+        <p class="qtext">Evaluates the global Schumann resonance magnetic field (6–25&nbsp;Hz)
+        as an exterior physical timing channel across the 3,002&nbsp;km LIGO Hanford–Livingston
+        (H1–L1) subterranean vault magnetometer baseline during a preregistered six-hour O3
+        epoch (GPS&nbsp;1264298000–1264319600). Two-axis canonical coherence recovers the
+        shared wavefield without compass or gain calibration, reaching
+        &gamma;&sup2;<sub>can</sub>(<em>f</em><sub>1</sub>)&nbsp;=&nbsp;0.3291
+        (<em>z</em>&nbsp;=&nbsp;24.54 above the off-band empirical null
+        &mu;<sub>0</sub>&nbsp;=&nbsp;0.0399&nbsp;&plusmn;&nbsp;0.0118; 49.9&times; null-corrected
+        vault gain over an unshielded GW170814 pilot) and establishing a six-hour Carter
+        Cramér–Rao timing floor of &sigma;<sub>&tau;</sub>&nbsp;=&nbsp;76.6&nbsp;&mu;s
+        (45.7&nbsp;&mu;s raw).</p>
+        <p class="note"><span class="note-label">Scope &amp; failed stability gate</span> —
+        Preregistered gate <strong>D2b is not supported</strong>: while 11/12 thirty-minute
+        windows were individually significant (<em>p</em>&nbsp;&le;&nbsp;0.05) with a physically
+        bounded median lag (&minus;3.85&nbsp;ms), between-window scatter (MADN&nbsp;=&nbsp;4.95&nbsp;ms)
+        exceeded the 0.796&nbsp;ms stationarity threshold by 6.2&times; (proposed mechanism:
+        diurnal lightning-source migration; companion WWLLN tests in
+        <a href="https://github.com/k-luecke/Geo">k-luecke/Geo</a> also not supported).
+        Reported strictly as an exterior audit bound, not a positioning system or GNSS
+        replacement. Acknowledges GWOSC (LIGO/Virgo/KAGRA) and Robert H. Holzworth / WWLLN
+        (<code>http://wwlln.net</code>).</p>
+        <div class="paper-links">
+          <a href="/papers/Schumann_Clock_Integrity_v2.pdf">PDF (8 pp.)</a>
+          <a href="https://github.com/k-luecke/time-integrity">GitHub (time-integrity)</a>
+          <a href="https://github.com/k-luecke/time-integrity/releases/tag/v2.0.0">Release v2.0.0</a>
+          <a href="https://github.com/k-luecke/Geo">Companion Notebook (Geo)</a>
+          <span class="sha">SHA-256: 88f0e3f6…cab5a9e</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026schumann,
+  author      = {Luecke, Kyle W.},
+  title       = {Exterior Clock-Integrity Auditing via Canonical Coherence of the Schumann Resonance Field},
+  institution = {Driftbound Labs},
+  year        = {2026},
+  month       = nov,
+  number      = {v2.0},
+  url         = {https://github.com/k-luecke/time-integrity},
+  note        = {ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+
+      <!-- PAPER 02 -->
+      <article class="entry" id="scp-typed-boundaries">
+        <span class="field"><span class="num">02</span> · Agentic Systems · Runtime Verification · Security</span>
+        <h3>Typed Boundaries for Small-Model Web Agents</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · v1.0 (September 2026) · 21 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">5/5 Bitcoin OpenTimestamps (.ots) Confirmed</span>
+          <span class="badge">Zero Invalid Actions Executed</span>
+        </div>
+        <p class="qtext">Evaluates a non-learned typed runtime boundary (SCP)—combining a
+        compact accessibility-tree projection with a deterministic four-rung guard ladder
+        (D<sub>1</sub>–D<sub>4</sub>) and provenance-preserving abstention—on MiniWoB++ under
+        BrowserGym (25 tasks &times; 10 seeds) and a confirmatory 300-world synthetic cohort.
+        Across Qwen2.5 0.5B, 1.5B, and 3B models, SCP tracks the reference agent on task
+        success (+0.8, +0.4, +0.8&nbsp;pp) at roughly one-third of exact BPE observation tokens
+        (3.1&times;–3.8&times; reduction) with <strong>zero invalid actions executed</strong>
+        (0/300 committed violations at D<sub>4</sub> vs. 152/300 unassisted, and 0 vs. 88
+        violations against an FP16 teacher-forced confidence baseline).</p>
+        <p class="note"><span class="note-label">Mechanism &amp; boundaries</span> — The gate
+        <strong>filters and does not repair</strong>: synthetic cohort task success was
+        identically 101/300 across every rung; &plusmn;10&nbsp;pp TOST equivalence was
+        supported at 0.5B ([&minus;2.4, +4.0]&nbsp;pp), marginal at 1.5B, and unbounded at 3B;
+        preregistered superiority over raw accessibility trees was not supported (+6.0&nbsp;pp,
+        <em>p</em>&nbsp;=&nbsp;0.24 vs. &alpha;&nbsp;=&nbsp;0.01). On Qwen3.5-2B, an attribution
+        ladder shows action-schema typing (+22.4&nbsp;pp) accounts for completion lift rather
+        than observation compression alone.</p>
+        <div class="paper-links">
+          <a href="/papers/Paper_1_Typed_Boundaries.pdf">PDF (21 pp.)</a>
+          <a href="https://github.com/k-luecke/scp-typed-boundaries">GitHub (scp-typed-boundaries)</a>
+          <a href="https://github.com/k-luecke/scp-typed-boundaries/releases/tag/v1.0.0">Release v1.0.0</a>
+          <span class="sha">SHA-256: f3541601…563b095</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026typed,
+  author      = {Luecke, Kyle W.},
+  title       = {Typed Boundaries for Small-Model Web Agents: Tracking the Reference Agent Across Small Scales at a Third of the Tokens with No Invalid Actions Executed},
+  institution = {Driftbound Labs},
+  year        = {2026},
+  month       = sep,
+  url         = {https://github.com/k-luecke/scp-typed-boundaries},
+  note        = {5/5 Bitcoin OpenTimestamps preregistration proofs confirmed. ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+
+      <!-- PAPER 03 -->
+      <article class="entry" id="tonic-gating">
+        <span class="field"><span class="num">03</span> · Computational Neuroscience · Mixture-of-Experts</span>
+        <h3>Phase Selects; It Does Not Amplify: A Preregistered Test of Oscillatory Control as Expert Selection</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · v1.0 (September 2026) · 13 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">12/12 Bitcoin OpenTimestamps (.ots) Confirmed</span>
+          <span class="badge">Stages T5–T13 Preregistered</span>
+        </div>
+        <p class="qtext">Tests across twelve preregistered experimental stages whether an
+        oscillatory division of labor—slow tonic selection stencils paired with phase-tagged
+        expert superposition—does useful work inside a small Mixture-of-Experts transformer.
+        Fixed-dynamics coupled units hold an expert-selection regime after control input stops
+        (<em>T</em><sub>hold</sub>&nbsp;=&nbsp;26.8 tokens at <em>n</em>&nbsp;=&nbsp;8;
+        65.0 tokens at <em>n</em>&nbsp;=&nbsp;3 with &rho;<sub>eff</sub>&nbsp;=&nbsp;0.989 vs.
+        &lt;2 tokens stateless), obey cosine lock-in demodulation
+        (<em>X</em>(&Delta;&phi;)&nbsp;&approx;&nbsp;max(0, cos&nbsp;&Delta;&phi;)), and act as
+        a single-pass expert-attribution medium in looped MoE under matched compute
+        (<em>r</em><sub>&phi;</sub>&nbsp;=&nbsp;0.869).</p>
+        <p class="note"><span class="note-label">Falsifications &amp; process record</span> —
+        Coherent superposition produced <strong>no ensemble amplification</strong>
+        (<em>G</em><sub>medium</sub>&nbsp;=&nbsp;0.044 vs. <em>G</em><sub>sum</sub>&nbsp;=&nbsp;0.251);
+        under continuous evidence, stateless lookup matched or outperformed persistent
+        coordination; across mid-gap lures (T12b), held state beat one-step memory (0.6525 vs.
+        0.2987) but tied <em>k</em>&nbsp;=&nbsp;3 majority smoothing (0.6390); and stage T10
+        was closed as <strong>not informatively tested</strong> with its classifier claim
+        withdrawn due to a disclosed tag-placement side-channel.</p>
+        <div class="paper-links">
+          <a href="/papers/Paper_2_Tonic_Gating.pdf">PDF (13 pp.)</a>
+          <a href="https://github.com/k-luecke/tonic-gating">GitHub (tonic-gating)</a>
+          <a href="https://github.com/k-luecke/tonic-gating/releases/tag/v1.0.0">Release v1.0.0</a>
+          <span class="sha">SHA-256: 4a5fb2ae…e1f1acb</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026phase,
+  author      = {Luecke, Kyle W.},
+  title       = {Phase Selects; It Does Not Amplify: A Preregistered Test of Oscillatory Control as Expert Selection},
+  institution = {Driftbound Labs},
+  year        = {2026},
+  month       = sep,
+  url         = {https://github.com/k-luecke/tonic-gating},
+  note        = {12/12 Bitcoin OpenTimestamps preregistration proofs confirmed. ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+
+      <!-- PAPER 04 -->
+      <article class="entry" id="network-native-computation">
+        <span class="field"><span class="num">04</span> · Distributed Systems · Query Complexity · Protocols</span>
+        <h3>Network-Native Computation: Foundations, Structural Leverage, External Validity, and the Limits of Prospective Governance</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · v1.0 (October 2026) · 14 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">8 Reproducible Micro-Experiments</span>
+          <span class="badge">Theorem 1 Lower Bound + Exp08 Negative Result</span>
+        </div>
+        <p class="qtext">Investigates when ordinary, RFC-compliant protocol transitions and
+        continuously maintained substrate invariants evaluate computational distinctions at
+        lower physical cost than local execution without deploying custom code into network
+        nodes. Across eight experiments: DNS <code>DNAME</code>/<code>CNAME</code> rewriting
+        evaluates finite automata with 100% agreement but runs 153.6&times;–268.6&times; slower
+        than local CPU (Exp01); Merkle frontier reconciliation achieves 25.2&times; wall
+        speedup and 3,158&times; wire reduction at <em>N</em>&nbsp;=&nbsp;2<sup>18</sup>,
+        <em>k</em>&nbsp;=&nbsp;1 while explicit mutation logs (&Delta;) beat NNC by 8.9&times;
+        when available (Exp02–Exp04); and geometry-dependent frontier scaling survives stock
+        Git v2.55.0 (23.8&times; wire cut; |<em>F</em>|&nbsp;=&nbsp;19 clustered vs. 34
+        scattered at <em>k</em>&nbsp;=&nbsp;16), 6-peer IPFS Bitswap + Kademlia DHT swarms
+        (13.9&times;–48.5&times; wire cut), and AO/Arweave checkpoint-witness emulation
+        (Exp05–Exp07).</p>
+        <p class="note"><span class="note-label">Prospective governance boundary</span> —
+        In Experiment&nbsp;08 (200 stratified held-out workloads, probe budget
+        <em>B</em>&nbsp;&le;&nbsp;8), zero-hindsight controllers failed pre-specified
+        thresholds (&eta;<sub><em>t</em></sub>&nbsp;=&nbsp;1.803&nbsp;&gt;&nbsp;1.25;
+        catastrophic misroute rate 11.0%&nbsp;&gt;&nbsp;5.0%) and lost to unconditional bulk
+        streaming (&eta;<sub><em>t</em></sub>&nbsp;=&nbsp;1.361), explained by Theorem&nbsp;1,
+        the Merkle Ambiguity Lemma, and tail-loss asymmetry (27.4&times; vs. 3.4&times;).</p>
+        <div class="paper-links">
+          <a href="/papers/Network_Native_Computation.pdf">PDF (14 pp.)</a>
+          <a href="https://github.com/k-luecke/network-native-computation">GitHub (network-native-computation)</a>
+          <a href="https://github.com/k-luecke/network-native-computation/releases/tag/v1.0.0">Release v1.0.0</a>
+          <span class="sha">SHA-256: d7d81762…3ea615b</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026network,
+  author      = {Luecke, Kyle W.},
+  title       = {Network-Native Computation: Foundations, Structural Leverage, External Validity, and the Limits of Prospective Governance},
+  institution = {Driftbound Labs},
+  year        = {2026},
+  month       = oct,
+  url         = {https://github.com/k-luecke/network-native-computation},
+  note        = {ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+
+      <!-- PAPER 05 -->
+      <article class="entry" id="ai-infrastructure-buildout">
+        <span class="field"><span class="num">05</span> · Infrastructure Research · Power Grids · Survival Analysis</span>
+        <h3>The Physical Layer of the AI Infrastructure Buildout</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · Institutional Research Whitepaper (September 2026) · 9 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">Hash-Locked Cohort Manifests</span>
+          <span class="badge">31 Builds · 2,184 MW Audited</span>
+        </div>
+        <p class="qtext">Reconstructs point-in-time utility interconnection dockets, municipal
+        structural permits, and statutory 811 excavation telemetry across 31 evaluable North
+        American hyperscale data centers and commercial semiconductor fabs (2,184&nbsp;MW
+        announced load). Physical or regulatory divergence preceded corporate schedule
+        revision in 9 of 9 resolved delay cases with an arithmetic median lead of
+        <strong>211 calendar days</strong> (IQR 200–225&nbsp;days); &gt;90-day slip scaled
+        monotonically across four utility interconnection states (0.0%, 37.5%, 100.0%, 100.0%);
+        only <strong>1,128&nbsp;MW (51.6%)</strong> cleared a three-condition execution gate;
+        right-censored Kaplan–Meier substation energization reached a <strong>112.0-week</strong>
+        step median across 18 transitions; and point-in-time physical features reduced Brier
+        calibration error by <strong>84.5%</strong> (0.0383 vs. 0.2476) across 8 of 8 held-out
+        test builds.</p>
+        <p class="note"><span class="note-label">Evidentiary boundary</span> — Cell sizes in
+        the most constrained queue tiers (<em>N</em>&nbsp;=&nbsp;5 and <em>N</em>&nbsp;=&nbsp;4)
+        and the held-out replay partition (<em>N</em>&nbsp;=&nbsp;8) are modest, and the Brier
+        evaluation is a point-in-time retrospective replay with zero live prospective
+        resolutions claimed in this release.</p>
+        <div class="paper-links">
+          <a href="/papers/AI_Infrastructure_Buildout_Whitepaper.pdf">PDF (9 pp.)</a>
+          <span class="sha">SHA-256: 610ace82…73da7b6</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026physical,
+  author      = {Luecke, Kyle W.},
+  title       = {The Physical Layer of the AI Infrastructure Buildout},
+  institution = {Driftbound Labs},
+  type        = {Institutional Research Whitepaper},
+  year        = {2026},
+  month       = sep,
+  url         = {https://driftboundlabs.com/papers/AI_Infrastructure_Buildout_Whitepaper.pdf},
+  note        = {ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+
+      <!-- PAPER 06 -->
+      <article class="entry" id="fnwd-v04-retraction">
+        <span class="field"><span class="num">06</span> · Symbolic Algebra · Concurrent Systems · Program Synthesis</span>
+        <h3>Autonomous Discovery of Idempotent State-Space Retractions and Conditional Commutation Manifolds (FNWD v0.4)</h3>
+        <p class="paper-byline">Kyle W. Luecke · Driftbound Labs · v0.4 (October 2026) · 8 pages</p>
+        <div class="badges">
+          <span class="badge badge-ots">6-Gate Suite + 12-Operator Blind Audit</span>
+          <span class="badge">Zero-Dependency Python Package (&lt;5s Replay)</span>
+        </div>
+        <p class="qtext">Introduces Formal Normalizer–Workload Discovery (FNWD v0.4) to
+        identify enabler–optimizer compositions (<em>E</em>&nbsp;&otimes;&nbsp;<em>O</em>)
+        pairing an observational state-space retraction <em>E</em> (<em>E</em>&sup2;&nbsp;=&nbsp;<em>E</em>,
+        &mathcal;O&nbsp;&circ;&nbsp;<em>E</em>&nbsp;=&nbsp;&mathcal;O) with a conditional
+        commutator <em>O</em> valid on Fix(<em>E</em>). Full-VM replay across 127 idempotents
+        over &#x1D53D;<sub>4093</sub><sup>4</sup>&nbsp;&times;&nbsp;&#x1D53D;<sub>4093</sub><sup>8</sup>&nbsp;&times;&nbsp;&mathcal;M<sub>64</sub>
+        falsifies unconstrained right-zero bands and constructs the 115-class quotient
+        <strong>Projection Poset (<em>P</em>, &le;)</strong> (18 strict chains; 100.0%
+        zero-probe deductive prediction across 100 pairs), while passing six pre-specified
+        verification gates (trace equivalence, 30/30 black-box linearizability fault recall,
+        &minus;94.3% factorial lock reduction, paired permutation <em>p</em><sub>adj</sub>&nbsp;=&nbsp;0.0006,
+        and 12-operator blind triage promoting 3/3 valid and 0/9 unsound operators).</p>
+        <p class="note"><span class="note-label">Algorithmic crossover boundary</span> —
+        While Domain&nbsp;1 (Affine Automata, 43.1&times;) and Domain&nbsp;2 (CRDT OR-Set,
+        1.68&times;) accelerate wall-clock execution, Domain&nbsp;3 (DSW Balanced Search Tree)
+        reduces locks by &minus;93.3% at <em>N</em>&nbsp;=&nbsp;150 but incurs a statistically
+        significant <strong>+69.6% latency increase</strong> because &Theta;(<em>N</em>) whole-tree
+        vine rebalancing exceeds lock-avoidance savings below the large-tree crossover.</p>
+        <div class="paper-links">
+          <a href="/papers/FNWD_v04_Algebraic_Retraction.pdf">PDF (8 pp.)</a>
+          <a href="https://github.com/k-luecke/fnwd-v04-retraction">GitHub (fnwd-v04-retraction)</a>
+          <a href="https://github.com/k-luecke/fnwd-v04-retraction/releases/tag/v0.4.0">Release v0.4.0</a>
+          <span class="sha">SHA-256: 600d2736…78b25ba</span>
+        </div>
+        <details class="bibtex">
+          <summary>BibTeX</summary>
+<pre>@techreport{luecke2026fnwd,
+  author      = {Luecke, Kyle W.},
+  title       = {Autonomous Discovery of Idempotent State-Space Retractions and Conditional Commutation Manifolds (FNWD v0.4)},
+  institution = {Driftbound Labs},
+  year        = {2026},
+  month       = oct,
+  number      = {v0.4.0},
+  url         = {https://github.com/k-luecke/fnwd-v04-retraction},
+  note        = {ORCID: 0009-0008-0202-7852}
+}</pre>
+        </details>
+      </article>
+    </section>
+
+    <!-- ================= OPEN STANDARDS & SPECIFICATIONS ================= -->
+    <section id="open-standards">
+      <span class="section-label">Open Standards &amp; Provenance Infrastructure</span>
+
+      <article class="entry" id="paxiom-receipts">
+        <span class="field"><span class="num">S1</span> · Cryptographic Provenance · Standard v0 (Release v0.1.3)</span>
+        <h3>Paxiom Receipts (<code>paxiom.receipt.v0</code>)</h3>
+        <p class="paper-byline">Open Specification, Verifier API &amp; Reference SDKs · v0.1.3 (2026)</p>
+        <div class="badges">
+          <span class="badge badge-ots">RFC 8785 JCS + Ed25519</span>
+          <span class="badge">npm · PyPI · MCP Registry</span>
+        </div>
+        <p class="qtext">An open, transport-agnostic cryptographic receipt format binding HTTP
+        requests, canonicalized outputs (RFC&nbsp;8785 JCS), SHA-256 digests, and x402 payment
+        references under Ed25519 signatures. Offline checks verify integrity without vendor
+        callbacks and label unchecked settlement claims explicitly as
+        <code>claimed_not_checked</code>.</p>
+        <div class="paper-links">
+          <a href="https://paxiom.org">paxiom.org</a>
+          <a href="https://api.paxiom.org/version">Verifier API</a>
+          <a href="https://github.com/k-luecke/paxiom-static">GitHub (paxiom-static)</a>
+          <a href="https://www.npmjs.com/package/@paxiom/receipts">npm (@paxiom/receipts)</a>
+          <a href="https://pypi.org/project/paxiom-receipts/">PyPI (paxiom-receipts)</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= COLOPHON ================= -->
+    <div class="colophon">
+      <p>All manuscripts are typeset from version-controlled Markdown and BibTeX sources with
+      vector figures and reproducible verification scripts. Pre-commitment hashes,
+      OpenTimestamps Bitcoin calendar proofs, and negative-control audits are preserved in each
+      companion repository.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">&copy; 2026 Driftbound Labs</span>
+    <span class="mono">
+      <a href="https://github.com/k-luecke">GitHub</a>
+      ·
+      <a href="https://paxiom.org">paxiom.org</a>
+      ·
+      <a href="https://termbrow.org">termbrow.org</a>
+      ·
+      <a href="https://github.com/k-luecke/driftbound-labs">driftbound-labs</a>
+      ·
+      <a href="mailto:admin@driftboundlabs.com">admin@driftboundlabs.com</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

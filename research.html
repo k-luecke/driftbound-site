@@ -22,6 +22,7 @@
   <div class="nav">
     <a class="wordmark" href="/">Driftbound Labs</a>
     <nav>
+      <a href="/papers.html">Papers</a>
       <a href="/research.html" aria-current="page">Research</a>
       <a href="/methodology.html">Methodology</a>
       <a href="/about.html">About</a>
@@ -124,6 +125,24 @@
       <span class="section-label">Active Work</span>
 
       <div class="project">
+        <h3>Published preprints &amp; verification packages</h3>
+        <p>Full manuscripts, SHA-256 digests, OpenTimestamps Bitcoin proofs, and companion
+        repositories are indexed on <a href="/papers.html">Papers &amp; Standards</a>:
+        <a href="https://github.com/k-luecke/scp-typed-boundaries">scp-typed-boundaries</a>
+        (typed web-agent boundaries, 5/5 <code>.ots</code> proofs),
+        <a href="https://github.com/k-luecke/tonic-gating">tonic-gating</a>
+        (oscillatory expert selection, 12/12 <code>.ots</code> proofs),
+        <a href="https://github.com/k-luecke/network-native-computation">network-native-computation</a>
+        (8 protocol substrate experiments &amp; bounded-probe lower bound),
+        <a href="/papers/AI_Infrastructure_Buildout_Whitepaper.pdf">The Physical Layer of the AI Infrastructure Buildout</a>,
+        and <a href="https://github.com/k-luecke/fnwd-v04-retraction">fnwd-v04-retraction</a>
+        (quotient projection poset &amp; 6-gate concurrency verification).</p>
+        <p class="note"><span class="note-label">Status</span> — v1/v2 preprints and
+        reproducible harnesses published; negative and crossover gates reported alongside
+        positive findings.</p>
+      </div>
+
+      <div class="project">
         <h3>Verifiable execution &amp; proof-of-delivery receipts</h3>
         <p><a href="https://paxiom.org">Paxiom Receipts</a>
         (<a href="https://github.com/k-luecke/paxiom-static">paxiom-static</a> ·
@@ -146,6 +165,7 @@
         timing channel.</p>
         <p>Related package:
         <a href="https://github.com/k-luecke/time-integrity">time-integrity</a>
+        (<a href="/papers/Schumann_Clock_Integrity_v2.pdf">v2.0 preprint PDF</a>)
         — preregistered O3 measurement package.
         Status carried from that repository: <strong>P1 verified</strong>;
         <strong>D2b failed</strong> (lag not stable between windows at the frozen
