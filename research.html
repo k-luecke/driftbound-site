@@ -124,6 +124,32 @@
       <span class="section-label">Active Work</span>
 
       <div class="project">
+        <h3>Verifiable execution &amp; proof-of-delivery receipts</h3>
+        <p><a href="https://paxiom.org">Paxiom Receipts</a>
+        (<a href="https://github.com/k-luecke/paxiom-static">paxiom-static</a> ·
+        <a href="https://api.paxiom.org/version">api.paxiom.org</a>)
+        implements <code>paxiom.receipt.v0</code>: Ed25519-signed delivery receipts binding HTTP
+        requests, canonicalized outputs, and x402 payment references, paired with zero-dependency
+        TypeScript (<a href="https://www.npmjs.com/package/@paxiom/receipts"><code>@paxiom/receipts</code></a>)
+        and Python (<a href="https://pypi.org/project/paxiom-receipts/"><code>paxiom-receipts</code></a>)
+        SDKs, MCP servers, and live Base Mainnet USDC settlement verification.</p>
+        <p class="note"><span class="note-label">Status</span> — live at <code>v0.1.3</code> on npm,
+        PyPI, Official MCP Registry, and Base Mainnet; offline checks report unverified settlement
+        claims explicitly as <code>claimed_not_checked</code>.</p>
+      </div>
+
+      <div class="project">
+        <h3>Falsification-gated discrete synthesis</h3>
+        <p><a href="https://github.com/k-luecke/monad-1-arc-agi-3">monad-1-arc-agi-3</a>
+        is the public competition reproduction package for <strong>Monad(1) V7</strong>
+        (<code>INOS v0.7</code>), combining Fuzzy Merkle Forest state indexing and falsification-gated
+        symbolic synthesis across interactive discrete environments (<code>100.0%</code> official
+        ARC-AGI-3 <code>OperationMode.COMPETITION</code> scorecard across 25 games / 167 levels).</p>
+        <p class="note"><span class="note-label">Status</span> — public benchmark reproduction
+        package; scoped strictly to discrete grid environments.</p>
+      </div>
+
+      <div class="project">
         <h3>Assured time integrity</h3>
         <p>The lab's current active focus, and the applied direction (01, above) it is
         actively pursuing: a way for synchronized clocks to detect a manipulated timing
