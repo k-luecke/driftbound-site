@@ -363,21 +363,22 @@
       <span class="section-label">Open Standards &amp; Provenance Infrastructure</span>
 
       <article class="entry" id="paxiom-receipts">
-        <span class="field"><span class="num">S1</span> · Cryptographic Provenance · Standard v0 (Release v0.1.3)</span>
-        <h3>Paxiom Receipts (<code>paxiom.receipt.v0</code>)</h3>
-        <p class="paper-byline">Open Specification, Verifier API &amp; Reference SDKs · v0.1.3 (2026)</p>
+        <span class="field"><span class="num">S1</span> · Cryptographic Provenance · Open MIT Standard (Release v0.2.0)</span>
+        <h3>Paxiom Receipts (<code>paxiom.receipt.v0</code>) &amp; x402 Delivery-Receipt Extension</h3>
+        <p class="paper-byline">Open Specification, Public Reference Verifier &amp; Zero-Dependency SDKs · v0.2.0 (2026)</p>
         <div class="badges">
-          <span class="badge badge-ots">RFC 8785 JCS + Ed25519</span>
+          <span class="badge badge-ots">JCS / Raw SHA-256 + Ed25519</span>
           <span class="badge">npm · PyPI · MCP Registry</span>
         </div>
-        <p class="qtext">An open, transport-agnostic cryptographic receipt format binding HTTP
-        requests, canonicalized outputs (RFC&nbsp;8785 JCS), SHA-256 digests, and x402 payment
+        <p class="qtext">An open, vendor-neutral cryptographic receipt format (<code>Payment-Receipt</code>) binding HTTP
+        requests, canonical JSON (<code>jcs-sha256</code>) or binary (<code>raw-sha256</code>) outputs, seller key discovery (<code>/.well-known/x402-keys.json</code>), and CAIP-2 / x402 payment
         references under Ed25519 signatures. Offline checks verify integrity without vendor
-        callbacks and label unchecked settlement claims explicitly as
+        callbacks, reject unauthorized signer substitution as <code>unauthorized_issuer</code>, and label unchecked settlement claims explicitly as
         <code>claimed_not_checked</code>.</p>
         <div class="paper-links">
           <a href="https://paxiom.org">paxiom.org</a>
-          <a href="https://api.paxiom.org/version">Verifier API</a>
+          <a href="https://paxiom.org/standards/receipts/v0/x402-delivery-receipt-extension.md">x402 v2 Extension Draft</a>
+          <a href="https://api.paxiom.org/version">Public Verifier API</a>
           <a href="https://github.com/k-luecke/paxiom-static">GitHub (paxiom-static)</a>
           <a href="https://www.npmjs.com/package/@paxiom/receipts">npm (@paxiom/receipts)</a>
           <a href="https://pypi.org/project/paxiom-receipts/">PyPI (paxiom-receipts)</a>

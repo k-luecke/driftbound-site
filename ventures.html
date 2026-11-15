@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ventures &amp; Advisory — Driftbound Labs</title>
-<meta name="description" content="Commercial software platforms, verification APIs, physical-layer infrastructure diligence, and scoped R&D engagements operated by Driftbound Labs LLC.">
+<meta name="description" content="Open cryptographic verification standards (Paxiom), institutional physical-layer infrastructure diligence, and scoped R&D engagements operated by Driftbound Labs LLC.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ventures &amp; Advisory — Driftbound Labs">
-<meta property="og:description" content="Commercial platforms (Paxiom), physical-layer infrastructure diligence, and verification engineering operated by Driftbound Labs LLC.">
+<meta property="og:description" content="Open protocol standards (Paxiom), physical-layer infrastructure diligence, and verification engineering operated by Driftbound Labs LLC.">
 <meta property="og:url" content="https://driftboundlabs.com/ventures.html">
 <link rel="canonical" href="https://driftboundlabs.com/ventures.html">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -37,34 +37,35 @@
 
     <div class="pagehead">
       <span class="kicker">Ventures &amp; Advisory · Driftbound Labs LLC</span>
-      <h1>Commercial platforms, technical diligence, and sponsored R&amp;D.</h1>
+      <h1>Open protocol standards, technical diligence, and sponsored R&amp;D.</h1>
       <p class="author-bar">
         Operating Entity: Driftbound Labs LLC · Inquiries: <a href="mailto:admin@driftboundlabs.com">admin@driftboundlabs.com</a>
       </p>
     </div>
 
     <div class="prose">
-      <p>Driftbound Labs LLC operates as both an applied research laboratory and the commercial parent for software infrastructure, verification APIs, and institutional technical diligence developed in-house. Every commercial product subscription, enterprise integration contract, data license, and advisory engagement is executed and invoiced directly through <strong>Driftbound Labs LLC</strong>.</p>
-      <p>We apply the same evidentiary standard to commercial deliverables that governs our <a href="/papers.html">published research</a>: deterministic verification, explicit provenance chains, and clear separation between verified facts and unverified claims.</p>
+      <p>Driftbound Labs LLC operates as both an applied research laboratory and the operating entity behind open cryptographic verification standards, institutional physical-layer telemetry, and scoped technical diligence. Commercial data licenses, infrastructure audits, and fixed-scope engineering engagements are executed and invoiced directly through <strong>Driftbound Labs LLC</strong>.</p>
+      <p>We apply the same evidentiary standard to commercial deliverables and public standards that governs our <a href="/papers.html">published research</a>: deterministic verification, explicit provenance chains, and clear separation between verified facts and unverified claims.</p>
     </div>
 
-    <!-- ================= COMMERCIAL PLATFORMS ================= -->
+    <!-- ================= PLATFORMS & STANDARDS ================= -->
     <section id="platforms">
-      <span class="section-label">Operating Platforms &amp; Spinouts</span>
+      <span class="section-label">Standards, Telemetry &amp; Spinouts</span>
 
       <article class="entry" id="paxiom">
-        <span class="field"><span class="num">V1</span> · Cryptographic Provenance · Base Mainnet &amp; MCP Infrastructure</span>
-        <h3><a href="https://paxiom.org">Paxiom</a> — Proof-of-Delivery Receipts for x402 &amp; Agentic APIs</h3>
+        <span class="field"><span class="num">V1</span> · Open Protocol Standard · x402 &amp; MCP Provenance Infrastructure</span>
+        <h3><a href="https://paxiom.org">Paxiom</a> — Open Delivery-Receipt Standard for x402 &amp; Agentic APIs</h3>
         <div class="badges">
-          <span class="badge badge-ots">Commercial Product · Live</span>
+          <span class="badge badge-ots">Open MIT Standard · v0.2.0</span>
           <span class="badge">@paxiom/receipts · paxiom-receipts · api.paxiom.org</span>
         </div>
-        <p class="qtext">Payment headers prove funds moved; Paxiom proves what bytes were delivered in exchange. Paxiom pairs the open <code>paxiom.receipt.v0</code> specification (RFC&nbsp;8785 canonical JSON + Ed25519 signatures) with zero-dependency TypeScript and Python SDKs, an Official MCP Registry server (<code>io.github.k-luecke/paxiom-receipts</code>), SSRF-hardened pre-payment seller preflight scanning, and live Base Mainnet USDC settlement counter-attestation.</p>
-        <p class="note"><span class="note-label">Commercial model</span> — Open-source MIT SDKs and free offline verification (<code>POST /v1/receipt/verify</code>), paired with metered x402 endpoints on <code>api.paxiom.org</code> (<code>$0.002</code> Base USDC live settlement counter-attestation; <code>$0.01</code> preflight safety scan) and flat-rate monthly <code>X-API-Key</code> enterprise accounts invoiced through Driftbound Labs LLC.</p>
+        <p class="qtext">Payment headers prove funds moved; Paxiom proves what bytes were delivered in exchange. Paxiom pairs the open <code>paxiom.receipt.v0</code> specification (<code>jcs-sha256</code> &amp; <code>raw-sha256</code> payload binding, <code>Payment-Receipt</code> headers, <code>/.well-known/x402-keys.json</code> seller key pinning, and Ed25519 signatures) with zero-dependency TypeScript and Python SDKs, an Official MCP Registry server (<code>io.github.k-luecke/paxiom-receipts</code>), SSRF-hardened pre-payment seller preflight scanning, and live Base Mainnet USDC settlement counter-attestation.</p>
+        <p class="note"><span class="note-label">Public-good posture</span> — 100% open-source MIT specification, SDKs, and self-hostable verifier runtime, paired with a free, rate-limited public reference verifier on <code>api.paxiom.org</code> (offline verification, pre-payment <code>x402</code> preflight scanning, and live Base USDC settlement counter-attestation with zero paywalls or API-key gates). Custom protocol integrations and facilitator/gateway sprints are available as fixed-scope engagements below.</p>
         <div class="paper-links">
           <a href="https://paxiom.org">paxiom.org</a>
+          <a href="https://paxiom.org/standards/receipts/v0/x402-delivery-receipt-extension.md">x402 v2 Extension Draft</a>
           <a href="https://paxiom.org/api.html">API &amp; SDK Docs</a>
-          <a href="https://api.paxiom.org/version">Live Verifier Status</a>
+          <a href="https://api.paxiom.org/version">Public Verifier Status</a>
           <a href="https://www.npmjs.com/package/@paxiom/receipts">npm</a>
           <a href="https://pypi.org/project/paxiom-receipts/">PyPI</a>
         </div>
@@ -108,8 +109,8 @@
 
       <div class="project">
         <h3>01 · Cryptographic Provenance &amp; Agentic Boundary Sprints (3–5 Days)</h3>
-        <p>Fixed-scope engineering sprints for API operators, x402 sellers/facilitators, MCP server authors, and agent-wallet teams: instrumenting <code>paxiom.receipt.v0</code> signed delivery headers, buyer-side offline &amp; Base Mainnet settlement verification, and deterministic runtime action-schema guards (<a href="/papers.html#scp-typed-boundaries">SCP D<sub>1</sub>–D<sub>4</sub></a>) that block invalid tool invocations before execution.</p>
-        <p class="note"><span class="note-label">Deliverable</span> — Production middleware integration, cross-language test vectors, key-rotation manifest (<code>/.well-known/paxiom-keys.json</code>), and verification runbook.</p>
+        <p>Fixed-scope engineering sprints for API operators, x402 sellers/facilitators, MCP server authors, and agent-wallet teams: instrumenting <code>paxiom.receipt.v0</code> <code>Payment-Receipt</code> headers, seller key discovery (<code>/.well-known/x402-keys.json</code>), self-hosted settlement counter-attestation, and deterministic runtime action-schema guards (<a href="/papers.html#scp-typed-boundaries">SCP D<sub>1</sub>–D<sub>4</sub></a>) that block invalid tool invocations before execution.</p>
+        <p class="note"><span class="note-label">Deliverable</span> — Production middleware integration, cross-language test vectors, key-rotation manifest (<code>/.well-known/x402-keys.json</code>), and verification runbook.</p>
       </div>
 
       <div class="project">
@@ -130,7 +131,7 @@
       <span class="section-label">Inquiries &amp; Contracting</span>
       <p>Write directly with the system, asset cohort, or technical question in the subject line. There is no sales queue; correspondence goes straight to the founder and principal investigator.</p>
       <p class="addr"><a href="mailto:admin@driftboundlabs.com">admin@driftboundlabs.com</a></p>
-      <p class="note"><span class="note-label">Entity &amp; terms</span> — Commercial engagements, API keys, and data licenses are contracted with <strong>Driftbound Labs LLC</strong>. Standard data and API access is governed by our <a href="/terms.html">Terms of Use &amp; Customer Data License</a> unless superseded by a separate written agreement.</p>
+      <p class="note"><span class="note-label">Entity &amp; terms</span> — Commercial diligence engagements, engineering sprints, and data licenses are contracted with <strong>Driftbound Labs LLC</strong>. Proprietary data and advisory deliverables are governed by our <a href="/terms.html">Terms of Use &amp; Customer Data License</a> unless superseded by a separate written agreement; open-source protocol software (such as Paxiom) is licensed under MIT.</p>
     </section>
 
   </div>

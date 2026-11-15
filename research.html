@@ -168,14 +168,14 @@
         <p><a href="https://paxiom.org">Paxiom Receipts</a>
         (<a href="https://github.com/k-luecke/paxiom-static">paxiom-static</a> ·
         <a href="https://api.paxiom.org/version">api.paxiom.org</a>)
-        implements <code>paxiom.receipt.v0</code>: Ed25519-signed delivery receipts binding HTTP
-        requests, canonicalized outputs, and x402 payment references, paired with zero-dependency
+        implements <code>paxiom.receipt.v0</code>: Ed25519-signed <code>Payment-Receipt</code> headers binding HTTP
+        requests, canonical JSON or raw binary outputs, seller public-key manifests (<code>/.well-known/x402-keys.json</code>), and x402 payment references, paired with zero-dependency
         TypeScript (<a href="https://www.npmjs.com/package/@paxiom/receipts"><code>@paxiom/receipts</code></a>)
         and Python (<a href="https://pypi.org/project/paxiom-receipts/"><code>paxiom-receipts</code></a>)
-        SDKs, MCP servers, and live Base Mainnet USDC settlement verification.</p>
-        <p class="note"><span class="note-label">Status</span> — live at <code>v0.1.3</code> on npm,
-        PyPI, Official MCP Registry, and Base Mainnet; offline checks report unverified settlement
-        claims explicitly as <code>claimed_not_checked</code>.</p>
+        SDKs, MCP servers, and a free public Base Mainnet USDC settlement reference verifier.</p>
+        <p class="note"><span class="note-label">Status</span> — open MIT standard at <code>v0.2.0</code> on npm,
+        PyPI, Official MCP Registry, and <code>api.paxiom.org</code>; offline checks report unverified settlement
+        claims explicitly as <code>claimed_not_checked</code> and key-substitution mismatches as <code>unauthorized_issuer</code>.</p>
       </div>
 
       <div class="project">

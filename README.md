@@ -4,8 +4,8 @@ Static website for **Driftbound Labs LLC** ([`https://driftboundlabs.com`](https
 
 ## Pages
 
-- `index.html` — Company & research overview, commercial lines, and release ledger
-- `ventures.html` — Commercial platforms (`Paxiom`, physical-layer telemetry), technical diligence, and scoped R&D engagements under `Driftbound Labs LLC`
+- `index.html` — Company & research overview, open standards, telemetry, and release ledger
+- `ventures.html` — Open protocol standards (`Paxiom` `v0.2.0`), physical-layer telemetry, technical diligence, and scoped R&D engagements under `Driftbound Labs LLC`
 - `papers.html` — Preprints, institutional whitepapers, SHA-256 & OpenTimestamps proofs, and open standards
 - `research.html` — Applied research directions and active public repositories
 - `methodology.html` — Literature-based discovery, morphological analysis, strong inference, and fundamental-limit anchoring
