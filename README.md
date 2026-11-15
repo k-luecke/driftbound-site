@@ -1,14 +1,16 @@
 # Driftbound Labs — Official Site (`driftboundlabs.com`)
 
-Static website for **Driftbound Labs** ([`https://driftboundlabs.com`](https://driftboundlabs.com)), served via GitHub Pages with enforced HTTPS.
+Static website for **Driftbound Labs LLC** ([`https://driftboundlabs.com`](https://driftboundlabs.com)), served via GitHub Pages with enforced HTTPS.
 
 ## Pages
 
-- `index.html` — Lab overview and navigation
+- `index.html` — Company & research overview, commercial lines, and release ledger
+- `ventures.html` — Commercial platforms (`Paxiom`, physical-layer telemetry), technical diligence, and scoped R&D engagements under `Driftbound Labs LLC`
+- `papers.html` — Preprints, institutional whitepapers, SHA-256 & OpenTimestamps proofs, and open standards
 - `research.html` — Applied research directions and active public repositories
 - `methodology.html` — Literature-based discovery, morphological analysis, strong inference, and fundamental-limit anchoring
-- `about.html` — Lab mission, founder background, and contact (`admin@driftboundlabs.com`)
-- `privacy.html` / `terms.html` — Site policies
+- `about.html` — `Driftbound Labs LLC`, founder background, and correspondence (`admin@driftboundlabs.com`)
+- `privacy.html` / `terms.html` — Privacy Policy & Customer Data License (`Driftbound Labs LLC`)
 
 ## Published Preprints (`/papers.html` & `/papers/`)
 
