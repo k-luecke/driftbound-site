@@ -387,346 +387,193 @@ footer a.mono:hover { color: var(--accent); }
   }
 }
 
-/* ==== COMFORTABLE LANDING UX ==== */
+/* ==== EDITORIAL MONOGRAPH LAYOUT ==== */
+/* Deliberate warm daylight cotton-paper stationery palette (no generic dark-mode SaaS) */
 :root {
-  --paper: #FAF8F4;
-  --surface: #F2EFE8;
-  --surface-hover: #EAE5DB;
-  --ink: #181D1B;
-  --muted: #535C58;
-  --faint: #78827D;
-  --line: #E2DDD3;
-  --hair: #ECE8DF;
-  --accent: #2B5F52;
-  --accent-soft: rgba(43, 95, 82, 0.10);
+  --paper: #FAF8F3;
+  --ink: #171918;
+  --muted: #4E5551;
+  --faint: #78807B;
+  --line: #DDD8CE;
+  --hair: #EAE6DD;
+  --accent: #234E43;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #161A18;
-    --surface: #1E2421;
-    --surface-hover: #252C29;
-    --ink: #ECEEEB;
-    --muted: #A3ADA8;
-    --faint: #78827D;
-    --line: #2B332F;
-    --hair: #222925;
-    --accent: #7CC4B2;
-    --accent-soft: rgba(124, 196, 178, 0.12);
+    --paper: #FAF8F3;
+    --ink: #171918;
+    --muted: #4E5551;
+    --faint: #78807B;
+    --line: #DDD8CE;
+    --hair: #EAE6DD;
+    --accent: #234E43;
   }
 }
 
-.wrap-wide {
-  max-width: 66rem;
+html {
+  color-scheme: light;
+}
+
+.site .nav {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 22px 28px;
+  align-items: baseline;
+}
+
+.ed-wrap {
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 28px;
 }
 
-.site {
-  background: color-mix(in srgb, var(--paper) 90%, transparent);
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 40;
+.ed-mast {
+  padding: 58px 0 44px;
+  border-bottom: 1px solid var(--ink);
 }
 
-.site .nav {
-  max-width: 66rem;
-  margin: 0 auto;
-  padding: 18px 28px;
-  align-items: center;
-}
-
-.site nav {
-  align-items: center;
-  gap: 24px;
-}
-
-.nav-cta {
-  padding: 6px 13px;
-  border: 1px solid var(--line) !important;
-  border-radius: 6px;
-  background: var(--surface);
-  color: var(--ink) !important;
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-.nav-cta:hover {
-  border-color: var(--accent) !important;
-  color: var(--accent) !important;
-}
-
-/* Comfortable Hero */
-.home-hero {
-  padding: 68px 0 52px;
-  max-width: 48rem;
-}
-
-.eyebrow-pill {
-  display: inline-block;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 5px 12px;
-  border-radius: 999px;
-  margin-bottom: 20px;
-}
-
-.home-hero h1 {
-  font-size: clamp(32px, 4.4vw, 48px);
+.ed-mast h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(30px, 3.8vw, 42px);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 20px;
-}
-
-.home-hero .lead {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 18.5px;
-  line-height: 1.62;
-  color: var(--muted);
-  max-width: 58ch;
-  margin-bottom: 28px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-}
-
-.btn-primary, .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 11px 20px;
-  border-radius: 8px;
-  border-bottom: 0;
-  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: var(--paper);
-  border: 1px solid var(--accent);
-}
-.btn-primary:hover {
-  opacity: 0.92;
-  color: var(--paper);
-}
-
-.btn-secondary {
-  background: var(--surface);
-  color: var(--ink);
-  border: 1px solid var(--line);
-}
-.btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* 3-Column Pillar Cards */
-.pillars-section {
-  padding: 12px 0 48px;
-}
-
-.pillar-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.pillar-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 26px;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
-}
-.pillar-card:hover {
-  border-color: var(--accent);
-  background: var(--surface-hover);
-  transform: translateY(-2px);
-}
-
-.pillar-tag {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 11.5px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
-  display: block;
-}
-
-.pillar-card h2 {
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 1.28;
-  margin-bottom: 10px;
-  color: var(--ink);
-}
-
-.pillar-card p {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 15px;
-  line-height: 1.58;
-  color: var(--muted);
+  line-height: 1.18;
+  letter-spacing: -0.018em;
+  max-width: 28ch;
   margin-bottom: 18px;
 }
 
-.pillar-cta {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 14px;
+.ed-mast p {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+/* Asymmetric 2-column Swiss monograph rows */
+.ed-row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 24px 44px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ed-rail {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding-top: 4px;
+}
+.ed-rail strong {
+  display: block;
+  color: var(--ink);
   font-weight: 500;
-  color: var(--accent);
+  margin-bottom: 4px;
 }
 
-/* Featured Research 2x2 Grid */
-.work-section {
-  padding: 44px 0 16px;
-  border-top: 1px solid var(--line);
+.ed-main {
+  min-width: 0;
 }
 
-.section-header-row {
+.ed-item + .ed-item {
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--hair);
+}
+
+.ed-item-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 8px 16px;
+  margin-bottom: 6px;
 }
 
-.section-header-row h2 {
-  font-size: 24px;
+.ed-item h2, .ed-item h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 20.5px;
   font-weight: 600;
+  line-height: 1.3;
   letter-spacing: -0.01em;
 }
 
-.section-header-row a {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.study-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.study-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 22px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.study-meta {
+.ed-item-meta {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--faint);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 8px;
 }
 
-.study-card h3 {
-  font-size: 18.5px;
-  font-weight: 600;
-  line-height: 1.32;
-  margin-bottom: 8px;
-}
-.study-card h3 a {
-  color: var(--ink);
-  border-bottom: 0;
-}
-.study-card h3 a:hover {
-  color: var(--accent);
-}
-
-.study-card p {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 14.8px;
-  line-height: 1.56;
+.ed-item p {
+  font-size: 17px;
+  line-height: 1.6;
   color: var(--muted);
-  margin-bottom: 14px;
+  max-width: 60ch;
 }
 
-.study-foot {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 13.5px;
-  display: flex;
-  gap: 16px;
+/* Clean bibliographic list for papers */
+.bib-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Contact Callout Banner */
-.contact-strip {
-  margin-top: 48px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 28px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.bib-list li {
+  padding: 15px 0;
+  border-top: 1px solid var(--hair);
+}
+.bib-list li:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
-.contact-strip h3 {
-  font-size: 20px;
+.bib-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  display: block;
   margin-bottom: 4px;
 }
 
-.contact-strip p {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  font-size: 15px;
+.bib-note {
+  font-size: 15.8px;
+  line-height: 1.55;
   color: var(--muted);
-  margin: 0;
+  display: block;
 }
 
-footer .wrap-wide {
+.bib-links {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  margin-top: 6px;
+  display: flex;
+  gap: 14px;
+  color: var(--faint);
+}
+
+footer .ed-wrap {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px 20px;
 }
 
-@media (max-width: 860px) {
-  .pillar-grid {
+@media (max-width: 760px) {
+  .ed-row {
     grid-template-columns: 1fr;
-  }
-  .study-grid {
-    grid-template-columns: 1fr;
-  }
-  .home-hero {
-    padding: 44px 0 36px;
-  }
-}
-
-@media (max-width: 560px) {
-  .wrap-wide, .site .nav {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-  .site nav {
     gap: 14px;
-    font-size: 11.5px;
+    padding: 30px 0;
+  }
+  .ed-mast {
+    padding: 40px 0 32px;
+  }
+  .ed-wrap, .site .nav {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
